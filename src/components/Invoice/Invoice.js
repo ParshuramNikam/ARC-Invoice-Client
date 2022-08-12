@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 const Invoice = () => {
-
+ 
     const location = useLocation()
     const [invoiceData, setInvoiceData] = useState(initialState)
     const [ rates, setRates] = useState(0)
