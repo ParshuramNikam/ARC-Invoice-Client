@@ -143,6 +143,7 @@ const InvoiceDetails = () => {
 
         saveAs(pdfBlob, 'invoice.pdf')
       }).then(() =>  setDownloadStatus('success'))
+      .catch(err => {console.log(err.messages);})
   }
 
 
