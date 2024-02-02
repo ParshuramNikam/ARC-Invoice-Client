@@ -213,7 +213,12 @@ if(!invoice) {
                   </ProgressButton> */}
               
                 <ProgressButton 
-                  onClick={createAndDownloadPdf} 
+                  // onClick={createAndDownloadPdf}
+                  onClick={
+                    () => {
+                      window.print();
+                    }
+                  } 
                   state={downloadStatus}>
                   Download PDF
                 </ProgressButton>
