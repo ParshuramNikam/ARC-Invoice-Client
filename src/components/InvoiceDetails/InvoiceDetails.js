@@ -249,6 +249,9 @@ if(!invoice) {
         
             <Modal open={open} setOpen={setOpen} invoice={invoice}/>
             <div className={styles.invoiceLayout}>
+
+            <div>| | | | | | | | | | |</div>
+
         <Container  className={classes.headerContainer}>
         
             <Grid container justifyContent="space-between" style={{padding: '30px 0px' }}>
