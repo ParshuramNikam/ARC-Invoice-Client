@@ -216,6 +216,11 @@ if(!invoice) {
                   // onClick={createAndDownloadPdf}
                   onClick={
                     () => {
+                      const printContent = document.querySelector('#invoice_print_container');
+                      const originalContents = document.body.innerHTML;
+
+                      document.body.innerHTML = printContent.innerHTML;
+
                       window.print();
                     }
                   } 
@@ -250,9 +255,8 @@ if(!invoice) {
             <Modal open={open} setOpen={setOpen} invoice={invoice}/>
             <div className={styles.invoiceLayout}>
 
-            <div>| | | | | | | | | | |</div>
 
-        <Container  className={classes.headerContainer}>
+        <Container  className={classes.headerContainer} id="invoice_print_container">
         
             <Grid container justifyContent="space-between" style={{padding: '30px 0px' }}>
             {!invoice?.creator?.includes(user?.result._id || user?.result?.googleId) ? 
