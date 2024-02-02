@@ -253,10 +253,12 @@ if(!invoice) {
              )}
         
             <Modal open={open} setOpen={setOpen} invoice={invoice}/>
-            <div className={styles.invoiceLayout}>
+        
+        
+        <div className={styles.invoiceLayout}  id="invoice_print_container">
 
 
-        <Container  className={classes.headerContainer} id="invoice_print_container">
+        <Container  className={classes.headerContainer}>
         
             <Grid container justifyContent="space-between" style={{padding: '30px 0px' }}>
             {!invoice?.creator?.includes(user?.result._id || user?.result?.googleId) ? 
